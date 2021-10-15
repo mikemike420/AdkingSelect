@@ -79,8 +79,16 @@ export default {
                         this.loaded = true;
                         this.options = response.data;
                         let optionValueExists = false;
-                        console.log(this.options)
-                        this.show = true
+                        console.log(this.options.length)
+
+                        if(this.options.length == 0)
+                         {
+                             this.show = false;
+                         }
+                         else
+                         {
+                             this.show = true;
+                         }
 
                     }).catch(error => {
                         this.show = false;
